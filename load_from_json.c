@@ -52,7 +52,7 @@ void load_from_json(const char *path, Decimal *node_times, int *daughter_1, int 
 
   daughter_1_in = daughters_1_in->child;
 
-  for(leaf = 0; daughter_1_in!= NULL & daughter_2_in!=NULL; daughter_1_in = daughter_1_in->next, daughter_2_in = daughter_2_in->next, leaf++) {
+  for(leaf = 0; (daughter_1_in!= NULL) & (daughter_2_in!=NULL); daughter_1_in = daughter_1_in->next, daughter_2_in = daughter_2_in->next, leaf++) {
     daughter_1[leaf] = daughter_1_in->valueint;
     daughter_2[leaf] = daughter_2_in->valueint;
   }
